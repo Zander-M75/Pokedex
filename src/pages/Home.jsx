@@ -1,7 +1,11 @@
+import '../styles/main.scss';
+
 export default function Home() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-4xl font-bold">Pokedex</h1>
+        <div className="home-container">
+            <div className="home-container__inner">
+                <div className="home-container__inner-content"><h1>switching to sass, F U</h1></div>
+            </div>
         </div>
     )
 }
