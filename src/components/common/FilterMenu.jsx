@@ -1,8 +1,12 @@
-import './FilterMenu.scss';
+import '../../styles/components/common/_filtermenu.scss';
+import SearchBar from './SearchBar';
 export default function FilterMenu() {
     return (
         <div className="filter-menu">
             <h2 className="filter-menu__title">Filter Menu</h2>
+            <div className="filter-menu__search-bar">
+                <SearchBar />
+            </div>
             <div className="filter-menu__content">
                 <h3 className="filter-menu__subtitle">Filter by</h3>
                 <div className="filter-menu__category">
