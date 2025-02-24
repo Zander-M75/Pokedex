@@ -1,9 +1,67 @@
-
 .poke-list {
-    
-    background-color: rgb(134, 134, 236);
+    background-color: #021ff7;  /* Gameboy-like grey color */
     padding: 20px;
-    border-radius: 10px;
-   
+    border-radius: 15px;
+    box-shadow: 
+        3px 3px 5px rgba(0, 0, 0, 0.2),
+        -1px -1px 3px rgba(255, 255, 255, 0.1);  /* Add highlight to top/left */
+    transform: perspective(1000px) rotateX(2deg);  /* Subtle tilt */
+    border: 2px solid rgba(0, 0, 0, 0.2);  /* Add border for depth */
 }
 
+.poke-list__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fa6969;  /* Brighter, more vibrant green */
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid #4a533c;
+    box-shadow: 
+        inset 0 2px 5px rgba(255, 255, 255, 0.2),
+        2px 2px 4px rgba(0, 0, 0, 0.1);  /* Add outer shadow */
+    transform: translateZ(5px);  /* Slight protrusion */
+}
+
+/* Add these new styles */
+.poke-list__header h2 {
+    margin: 0;
+    color: #1a1c17;
+    font-family: 'Press Start 2P', monospace;  /* Optional: for more retro look */
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);  /* Add subtle text shadow */
+}
+
+.poke-list__screen {
+    background-color: #dce5c6;  /* Brighter, more vibrant green */
+    min-height: 300px;
+    border: 2px solid #4a533c;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px;
+    box-shadow: 
+        inset 0 0 15px rgba(255, 255, 255, 0.3),
+        0 0 2px rgba(154, 214, 123, 0.5),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Inner shadow for depth */
+    position: relative;  /* For the overlay effect */
+    transform: translateZ(2px);  /* Slight recess */
+}
+
+.poke-list__screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(0, 0, 0, 0.05) 100%
+    );  /* Enhanced screen glare effect */
+    pointer-events: none;  /* Ensures the overlay doesn't interfere with interactions */
+}
