@@ -1,0 +1,34 @@
+
+.header {
+    background-color: grey;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.header-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.header-nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+.header-nav li a {
+    text-decoration: none;
+    color: #333;
+}
+
+

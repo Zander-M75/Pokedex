@@ -1,5 +1,7 @@
-import '../../styles/components/common/_filtermenu.scss';
+
 import SearchBar from './SearchBar';
+import '../../styles/components/common/FilterMenu.css';
+
 export default function FilterMenu() {
     return (
         <div className="filter-menu">

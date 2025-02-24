@@ -1,4 +1,4 @@
-import '../../styles/components/common/_searchbar.scss';
+
 
 export default function SearchBar() {
     return (
