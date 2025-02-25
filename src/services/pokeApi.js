@@ -1,7 +1,11 @@
 // src/services/pokeApi.js
-import Pokedex from 'pokedex-promise-v2';
+const BASE_URL = 'https://pokeapi.co/api/v2';
 
-// Initialize the Pokedex instance
-const P = new Pokedex();
+const pokeApi = {
+    getPokemonsList: async ({ limit = 151 } = {}) => {
+        const response = await fetch(`${BASE_URL}/pokemon?limit=${limit}`);
+        return response.json();
+    },
+};
 
-export default P;
+export default pokeApi;
