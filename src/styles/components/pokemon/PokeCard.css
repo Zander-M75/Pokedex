@@ -1,6 +1,48 @@
-
 .poke-card {
-    background-color: greenyellow;
-    padding: 20px;
+    background-color: #dce5c6;  /* Same as screen color */
+    padding: 15px;
     border-radius: 10px;
+    border: 5px solid #4a533c;
+    box-shadow: 
+        inset 0 0 15px rgba(255, 255, 255, 0.3),
+        0 0 2px rgba(154, 214, 123, 0.5),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: perspective(1000px) rotateX(1deg);
 }
+
+.poke-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+.poke-card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.poke-card__header h2 {
+    margin: 0;
+    color: #1a1c17;
+    font-family: 'Press Start 2P', monospace;  /* Optional: for more retro look */
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);  /* Add subtle text shadow */
+    
+   
+}
+
+
+
