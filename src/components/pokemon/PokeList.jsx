@@ -26,7 +26,9 @@ export default function PokeList() {
                                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke.url.split('/')[6]}.png`}
                                 alt={poke.name}
                             />
-                            <span className="pokemon-name">{poke.name}</span>
+                            <span className="pokemon-name">
+                                {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
+                            </span>
                         </div>
                     ))}
                 </div>
