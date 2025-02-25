@@ -2,9 +2,12 @@
 const BASE_URL = 'https://pokeapi.co/api/v2';
 
 const pokeApi = {
-    getPokemonsList: async ({ limit = 151 } = {}) => {
+    getPokemonsList: async ({ limit = 1010 } = {}) => {
         const response = await fetch(`${BASE_URL}/pokemon?limit=${limit}`);
-        return response.json();
+        const data = await response.json();
+        // Sort the results alphabetically
+        data.results.sort((a, b) => a.name.localeCompare(b.name));
+        return data;
     },
 };
 
